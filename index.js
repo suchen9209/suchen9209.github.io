@@ -44,7 +44,9 @@ navigator.serviceWorker.ready
   fetch('./register', {
     method: 'post',
     headers: {
-      'Content-type': 'application/json'
+      'Content-type': 'application/json',
+      'WebPush'  : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.Bx21_ukJyiy8ZkJDTxnmhiIaa-m8DTCIkRD1ptnir4o'
+      
     },
     body: JSON.stringify({
       subscription: subscription
@@ -62,7 +64,8 @@ navigator.serviceWorker.ready
     fetch('./sendNotification', {
       method: 'post',
       headers: {
-        'Content-type': 'application/json'
+        'Content-type': 'application/json',
+        'WebPush'  : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.Bx21_ukJyiy8ZkJDTxnmhiIaa-m8DTCIkRD1ptnir4o'
       },
       body: JSON.stringify({
         subscription: subscription,
