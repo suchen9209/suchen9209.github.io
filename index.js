@@ -1,8 +1,6 @@
 function urlBase64ToUint8Array(base64String) {
   var padding = '='.repeat((4 - base64String.length % 4) % 4);
-  var base64 = (base64String + padding)
-    .replace(/\-/g, '+')
-    .replace(/_/g, '/');
+  var base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/');
  
   var rawData = window.atob(base64);
   var outputArray = new Uint8Array(rawData.length);
@@ -14,7 +12,7 @@ function urlBase64ToUint8Array(base64String) {
 }
 
 // Register a Service Worker.
-navigator.serviceWorker.register('service-worker.js');
+navigator.serviceWorker.register('sw.js');
 
 navigator.serviceWorker.ready
 .then(function(registration) {
