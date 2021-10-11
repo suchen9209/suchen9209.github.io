@@ -28,22 +28,51 @@ self.addEventListener('push', function(event) {
   // console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
   // console.log('sw推送消息已经完成 推送回来的数据是',event.data.text())
   // console.log('检测数据类型',typeof(event.data.text()))
-  var jsonData = JSON.parse(event.data.text())
 
-  const title = jsonData.title;
-  linkUrl = jsonData.url
-  const options = {
-    body: jsonData.message,
-    icon: 'img/logo.png',
-    badge: 'img/badge.png'
-  };
+  var title = 'Get a message.';
+var body = 'We have received a push message.';
+var icon = '/images/icon-192x192.png';
+var tag = 'simple-push-demo-notification-tag';
+
+  event.waitUntil(self.registration.showNotification(title, {
+    body: body,
+    icon: icon,
+    tag: tag
+  }))
+
+console.log(event.data)
+  // var jsonData = JSON.parse(event.data.text())
+
+  // const title = jsonData.title;
+  // linkUrl = jsonData.url
+  // const options = {
+  //   body: jsonData.message,
+  //   icon: 'img/logo.png',
+  //   badge: 'img/badge.png'
+  // };
 //自定义推送内容 展示推送栏消息
-  event.waitUntil(self.registration.showNotification(title, options));
+  // event.waitUntil(self.registration.showNotification(title, options));
   // self._hmt.push(['_trackEvent', '推送消息弹框', '消息', '', '展示推送弹框'])
   // 下面是简写
   // const notificationPromise = self.registration.showNotification(title, options);
   // event.waitUntil(notificationPromise);
 });
+// 点击推来的消息的某一条的监听
+self.addEventListener('install', function(event) {
+  var title = 'Get a message.';
+var body = 'We have received a push message.';
+var icon = '/images/icon-192x192.png';
+var tag = 'simple-push-demo-notification-tag';
+
+  event.waitUntil(self.registration.showNotification(title, {
+    body: body,
+    icon: icon,
+    tag: tag,
+    delay:10
+  }))
+
+});
+
 
 // 点击推来的消息的某一条的监听
 self.addEventListener('notificationclick', function(event) {
@@ -58,14 +87,4 @@ self.addEventListener('notificationclick', function(event) {
   // event.waitUntil确保浏览器不会在显示新窗口前终止服务工作线程
 });
 
-var title = 'Get a message.';
-var body = 'We have received a push message.';
-var icon = '/images/icon-192x192.png';
-var tag = 'simple-push-demo-notification-tag';
-
-  self.registration.showNotification(title, {
-    body: body,
-    icon: icon,
-    tag: tag
-  })
 
