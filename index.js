@@ -25,9 +25,9 @@ navigator.serviceWorker.ready
     }
 
     // Get the server's public key
-    // const response = await fetch('./vapidPublicKey');
-    // const vapidPublicKey = await response.text();
-    const vapidPublicKey = "BAChG_64ziIp63ytDS6k2r5f1lsK_qDC-18ea38teIBX7h0ZG05zYYkQDvScL6FP81TLI95dv7CatzapQgjUIvM";
+    const response = await fetch('./vapidPublicKey');
+    const vapidPublicKey = await response.text();
+    // const vapidPublicKey = "BJ3d6EkAN_wKj1Ysyd6ntdx3ePUw-J58h9-FAoT7fS5PlhCHjwj8-8B43X-ChCDKE8jsUnj3ZbnmRfsvlu0Ayl4";
     // Chrome doesn't accept the base64-encoded (string) vapidPublicKey yet
     // urlBase64ToUint8Array() is defined in /tools.js
     const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
