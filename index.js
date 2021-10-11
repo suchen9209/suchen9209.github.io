@@ -12,7 +12,7 @@ function urlBase64ToUint8Array(base64String) {
 }
 
 // Register a Service Worker.
-navigator.serviceWorker.register('sw.js');
+navigator.serviceWorker.register('sw.js?2');
 
 navigator.serviceWorker.ready
 .then(function(registration) {
