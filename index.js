@@ -70,7 +70,7 @@ navigator.serviceWorker.ready
         title:"123",
         ttl: 0,
       }),
-    // });
-  };
+    });
+  // };
 
 });
