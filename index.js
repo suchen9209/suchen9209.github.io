@@ -45,7 +45,7 @@ navigator.serviceWorker.ready
     method: 'post',
     headers: {
       'Content-type': 'application/json',
-      'WebPush'  : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.Bx21_ukJyiy8ZkJDTxnmhiIaa-m8DTCIkRD1ptnir4o'
+      'WebPush'  : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwczovL3N1Y2hlbjkyMDkuZ2l0aHViLmlvLyIsImV4cCI6MTYzMzk3NjEzNCwic3ViIjoibWFpbHRvOnN1Y2hlbjkyMDlAMTI2LmNvbSJ9.jWbpekXOFk2EdyAPE_BATl78mBZI-LlHx8iPCD2kLI8'
       
     },
     body: JSON.stringify({
@@ -65,7 +65,7 @@ navigator.serviceWorker.ready
       method: 'post',
       headers: {
         'Content-type': 'application/json',
-        'WebPush'  : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.Bx21_ukJyiy8ZkJDTxnmhiIaa-m8DTCIkRD1ptnir4o'
+        'WebPush'  : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwczovL3N1Y2hlbjkyMDkuZ2l0aHViLmlvLyIsImV4cCI6MTYzMzk3NjEzNCwic3ViIjoibWFpbHRvOnN1Y2hlbjkyMDlAMTI2LmNvbSJ9.jWbpekXOFk2EdyAPE_BATl78mBZI-LlHx8iPCD2kLI8'
       },
       body: JSON.stringify({
         subscription: subscription,
