@@ -58,8 +58,7 @@ self.addEventListener('notificationclick', function(event) {
   // event.waitUntil确保浏览器不会在显示新窗口前终止服务工作线程
 });
 
-
-var title = 'Yay a message.';
+var title = 'Get a message.';
 var body = 'We have received a push message.';
 var icon = '/images/icon-192x192.png';
 var tag = 'simple-push-demo-notification-tag';
