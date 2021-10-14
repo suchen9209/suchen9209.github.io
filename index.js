@@ -38,18 +38,20 @@ navigator.serviceWorker.ready
       applicationServerKey: convertedVapidKey
     });
   });
+}).then(function(subscription) {
+  console.log(subscription)
+  console.log(JSON.stringify({      subscription: subscription    }))
+  // Send the subscription details to the server using the Fetch API.
+  // fetch('./register', {
+  //   method: 'post',
+  //   headers: {
+  //     'Content-type': 'application/json'    
+  //   },
+  //   body: JSON.stringify({
+  //     subscription: subscription
+  //   }),
+  // });
 });
-// .then(function(subscription) {
-//   // Send the subscription details to the server using the Fetch API.
-//   fetch('./register', {
-//     method: 'post',
-//     headers: {
-//       'Content-type': 'application/json'    
-//     },
-//     body: JSON.stringify({
-//       subscription: subscription
-//     }),
-//   });
 
 //   document.getElementById('doIt').onclick = function() {
 //     const payload = document.getElementById('notification-payload').value;
